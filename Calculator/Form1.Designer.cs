@@ -101,6 +101,7 @@ namespace Calculator
             this.buttonBSpace.TabIndex = 5;
             this.buttonBSpace.Text = "⌫";
             this.buttonBSpace.UseVisualStyleBackColor = true;
+            this.buttonBSpace.Click += new System.EventHandler(this.buttonBSpace_Click);
             // 
             // buttonClear
             // 
@@ -110,6 +111,7 @@ namespace Calculator
             this.buttonClear.TabIndex = 6;
             this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonClearEntry
             // 
@@ -119,6 +121,7 @@ namespace Calculator
             this.buttonClearEntry.TabIndex = 7;
             this.buttonClearEntry.Text = "CE";
             this.buttonClearEntry.UseVisualStyleBackColor = true;
+            this.buttonClearEntry.Click += new System.EventHandler(this.buttonClearEntry_Click);
             // 
             // buttonPercent
             // 
