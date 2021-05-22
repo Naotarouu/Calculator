@@ -17,17 +17,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
         {
 
         }
@@ -38,6 +28,11 @@ namespace Calculator
         }
 
         private void negateButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clickButton(object sender, EventArgs e)
         {
 
         }

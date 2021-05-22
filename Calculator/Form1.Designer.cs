@@ -54,6 +54,7 @@ namespace Calculator
             this.button1 = new System.Windows.Forms.Button();
             this.pointButton = new System.Windows.Forms.Button();
             this.negateButton = new System.Windows.Forms.Button();
+            this.textResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // plusButton
@@ -174,6 +175,7 @@ namespace Calculator
             this.button2.TabIndex = 12;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.clickButton);
             // 
             // button3
             // 
@@ -194,7 +196,7 @@ namespace Calculator
             this.button4.TabIndex = 14;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.clickButton);
             // 
             // button5
             // 
@@ -205,6 +207,7 @@ namespace Calculator
             this.button5.TabIndex = 15;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.clickButton);
             // 
             // button6
             // 
@@ -215,6 +218,7 @@ namespace Calculator
             this.button6.TabIndex = 16;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.clickButton);
             // 
             // button7
             // 
@@ -225,7 +229,7 @@ namespace Calculator
             this.button7.TabIndex = 17;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.clickButton);
             // 
             // button8
             // 
@@ -236,6 +240,7 @@ namespace Calculator
             this.button8.TabIndex = 18;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.clickButton);
             // 
             // button9
             // 
@@ -246,6 +251,7 @@ namespace Calculator
             this.button9.TabIndex = 19;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.clickButton);
             // 
             // button0
             // 
@@ -256,6 +262,7 @@ namespace Calculator
             this.button0.TabIndex = 20;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.clickButton);
             // 
             // button1
             // 
@@ -266,6 +273,7 @@ namespace Calculator
             this.button1.TabIndex = 1;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.clickButton);
             // 
             // pointButton
             // 
@@ -286,11 +294,22 @@ namespace Calculator
             this.negateButton.UseVisualStyleBackColor = true;
             this.negateButton.Click += new System.EventHandler(this.negateButton_Click);
             // 
+            // textResult
+            // 
+            this.textResult.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textResult.Location = new System.Drawing.Point(12, 36);
+            this.textResult.Name = "textResult";
+            this.textResult.Size = new System.Drawing.Size(217, 33);
+            this.textResult.TabIndex = 23;
+            this.textResult.Text = "0";
+            this.textResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 431);
+            this.Controls.Add(this.textResult);
             this.Controls.Add(this.negateButton);
             this.Controls.Add(this.pointButton);
             this.Controls.Add(this.button1);
@@ -322,6 +341,7 @@ namespace Calculator
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,6 +371,7 @@ namespace Calculator
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button pointButton;
         private System.Windows.Forms.Button negateButton;
+        private System.Windows.Forms.TextBox textResult;
     }
 }
 
