@@ -34,7 +34,11 @@ namespace Calculator
 
         private void clickButton(object sender, EventArgs e)
         {
+            if (textResult.Text == "0")
+                textResult.Clear();
 
+            Button button = (Button)sender;
+            textResult.Text = textResult.Text + button.Text;
         }
     }
 }
