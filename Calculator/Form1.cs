@@ -22,16 +22,6 @@ namespace Calculator
 
         }
 
-        private void multiplyButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void negateButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void clickButton(object sender, EventArgs e)
         {
             if (textResult.Text == "0")

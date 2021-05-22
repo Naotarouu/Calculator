@@ -83,7 +83,6 @@ namespace Calculator
             this.buttonMultiply.TabIndex = 3;
             this.buttonMultiply.Text = "×";
             this.buttonMultiply.UseVisualStyleBackColor = true;
-            this.buttonMultiply.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // buttonDivide
             // 
@@ -284,7 +283,6 @@ namespace Calculator
             this.buttonNegate.TabIndex = 22;
             this.buttonNegate.Text = "+/-";
             this.buttonNegate.UseVisualStyleBackColor = true;
-            this.buttonNegate.Click += new System.EventHandler(this.negateButton_Click);
             // 
             // textResult
             // 
