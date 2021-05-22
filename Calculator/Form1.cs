@@ -50,5 +50,13 @@ namespace Calculator
         {
             textResult.Text = "0";
         }
+
+        private void clickOperator(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            performed_operation = button.Text;
+            value_result = Double.Parse(textResult.Text);
+
+        }
     }
 }
