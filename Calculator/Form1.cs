@@ -59,9 +59,27 @@ namespace Calculator
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+        private void clickEqual(object sender, EventArgs e)
+        {
+            switch (performed_operation) 
+            {
+                case "+":
+                    textResult.Text = (value_result + Double.Parse(textResult.Text)).ToString();
+                    break;
+                case "-":
+                    textResult.Text = (value_result - Double.Parse(textResult.Text)).ToString();
+                    break;
+                case "*":
+                    textResult.Text = (value_result * Double.Parse(textResult.Text)).ToString();
+                    break;
+                case "/":
+                    textResult.Text = (value_result / Double.Parse(textResult.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
+               
         }
     }
 }
