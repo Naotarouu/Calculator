@@ -13,8 +13,9 @@ namespace Calculator
     public partial class Calculator : Form
     {
         Double value_result = 0;
-        String performed_operation = "";
-       
+        String performing_operation = "";
+        bool performedOperation = false;
+        
         public Calculator()
         {
             InitializeComponent();
@@ -27,17 +28,32 @@ namespace Calculator
 
         private void clickButton(object sender, EventArgs e)
         {
-            if (textResult.Text == "0")
+            if ((textResult.Text == "0") || (performedOperation))
                 textResult.Clear();
 
+            performedOperation = false;
             Button button = (Button)sender;
-            textResult.Text = textResult.Text + button.Text;
+            if (button.Text == ".")
+            {
+                if (!textResult.Text.Contains("."))
+                    textResult.Text += button.Text;
+
+            }
+            else { }
+            textResult.Text += button.Text;
         }
 
         private void buttonBSpace_Click(object sender, EventArgs e)
         {
-            textResult.Text = textResult.Text.Substring(0, textResult.Text.Length - 1);
+            if (textResult.Text.Length > 0)
+            {
+                textResult.Text = textResult.Text.Remove(textResult.Text.Length - 1, 1);
+            }
 
+            if (textResult.Text == "")
+            {
+                textResult.Text = "0";
+            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -54,15 +70,28 @@ namespace Calculator
         private void clickOperator(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            performed_operation = button.Text;
-            value_result = Double.Parse(textResult.Text);
+            if (value_result != 0)
+            {
+                buttonEqual.PerformClick();
+                performing_operation = button.Text;
+                current_operation.Text = value_result + " " + performing_operation;
+                performedOperation = true;
+
+            }
+            else
+            {
+                performing_operation = button.Text;
+                value_result = Double.Parse(textResult.Text);
+                current_operation.Text = value_result + " " + performing_operation;
+                performedOperation = true;
+            }
 
         }
 
 
         private void clickEqual(object sender, EventArgs e)
         {
-            switch (performed_operation) 
+            switch (performing_operation) 
             {
                 case "+":
                     textResult.Text = (value_result + Double.Parse(textResult.Text)).ToString();
@@ -79,7 +108,9 @@ namespace Calculator
                 default:
                     break;
             }
-               
+            value_result = Double.Parse(textResult.Text);
+            current_operation.Text = "";
+                
         }
     }
 }

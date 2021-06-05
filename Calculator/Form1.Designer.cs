@@ -54,7 +54,7 @@ namespace Calculator
             this.buttonNegate = new System.Windows.Forms.Button();
             this.textResult = new System.Windows.Forms.TextBox();
             this.buttonMinus = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.current_operation = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -281,6 +281,7 @@ namespace Calculator
             this.buttonPoint.TabIndex = 21;
             this.buttonPoint.Text = ".";
             this.buttonPoint.UseVisualStyleBackColor = true;
+            this.buttonPoint.Click += new System.EventHandler(this.clickButton);
             // 
             // buttonNegate
             // 
@@ -311,15 +312,14 @@ namespace Calculator
             this.buttonMinus.UseVisualStyleBackColor = true;
             this.buttonMinus.Click += new System.EventHandler(this.clickOperator);
             // 
-            // label1
+            // current_operation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(222, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 25);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "0";
+            this.current_operation.AutoSize = true;
+            this.current_operation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.current_operation.Location = new System.Drawing.Point(22, 33);
+            this.current_operation.Name = "current_operation";
+            this.current_operation.Size = new System.Drawing.Size(0, 20);
+            this.current_operation.TabIndex = 24;
             // 
             // button10
             // 
@@ -393,14 +393,15 @@ namespace Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(268, 381);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.current_operation);
             this.Controls.Add(this.textResult);
             this.Controls.Add(this.buttonNegate);
             this.Controls.Add(this.buttonPoint);
@@ -479,7 +480,7 @@ namespace Calculator
         private System.Windows.Forms.Button buttonEqual;
         private System.Windows.Forms.Button buttonPoint;
         private System.Windows.Forms.Button buttonNegate;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label current_operation;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
