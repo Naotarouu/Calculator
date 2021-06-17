@@ -60,6 +60,7 @@ namespace Calculator
         {
             textResult.Text = "0";
             value_result = 0;
+            current_operation.Text = "";
         }
 
         private void buttonClearEntry_Click(object sender, EventArgs e)
@@ -109,8 +110,31 @@ namespace Calculator
                     break;
             }
             value_result = Double.Parse(textResult.Text);
-            current_operation.Text = "";
-                
+            current_operation.Text = "";        
+        }
+
+        private void clickSqrt(object sender, EventArgs e)
+        {
+            double sqrt = Double.Parse(textResult.Text);
+            current_operation.Text = System.Convert.ToString("Sqrt" + "(" + (textResult.Text) + ")");
+            sqrt = Math.Sqrt(sqrt);
+            textResult.Text = System.Convert.ToString(sqrt);
+        }
+
+        private void clickReciprocal(object sender, EventArgs e)
+        {
+            double reciprocal = Double.Parse(textResult.Text);
+            current_operation.Text = System.Convert.ToString("1/" + "(" + textResult.Text + ")" );
+            reciprocal = 1 / reciprocal;
+            textResult.Text = System.Convert.ToString(reciprocal);
+        }
+
+        private void clickNegation(object sender, EventArgs e)
+        {
+            double negation = Double.Parse(textResult.Text);
+            current_operation.Text = System.Convert.ToString("-" + "(" + textResult.Text + ")");
+            negation = negation * -1;
+            textResult.Text = System.Convert.ToString(negation);
         }
     }
 }

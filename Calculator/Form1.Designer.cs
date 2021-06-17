@@ -153,6 +153,7 @@ namespace Calculator
             this.buttonFactor.TabIndex = 9;
             this.buttonFactor.Text = "1/x";
             this.buttonFactor.UseVisualStyleBackColor = true;
+            this.buttonFactor.Click += new System.EventHandler(this.clickReciprocal);
             // 
             // buttonSqrt
             // 
@@ -162,6 +163,7 @@ namespace Calculator
             this.buttonSqrt.TabIndex = 11;
             this.buttonSqrt.Text = "Sqrt";
             this.buttonSqrt.UseVisualStyleBackColor = true;
+            this.buttonSqrt.Click += new System.EventHandler(this.clickSqrt);
             // 
             // button2
             // 
@@ -291,6 +293,7 @@ namespace Calculator
             this.buttonNegate.TabIndex = 22;
             this.buttonNegate.Text = "+/-";
             this.buttonNegate.UseVisualStyleBackColor = true;
+            this.buttonNegate.Click += new System.EventHandler(this.clickNegation);
             // 
             // textResult
             // 
