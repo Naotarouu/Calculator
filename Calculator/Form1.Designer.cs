@@ -144,6 +144,7 @@ namespace Calculator
             this.buttonPercent.TabIndex = 8;
             this.buttonPercent.Text = "%";
             this.buttonPercent.UseVisualStyleBackColor = true;
+            this.buttonPercent.Click += new System.EventHandler(this.clickPercent);
             // 
             // buttonFactor
             // 

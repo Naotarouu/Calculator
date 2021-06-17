@@ -136,5 +136,14 @@ namespace Calculator
             negation = negation * -1;
             textResult.Text = System.Convert.ToString(negation);
         }
+
+        private void clickPercent(object sender, EventArgs e)
+        {
+            double percent = Double.Parse(textResult.Text);
+            current_operation.Text = System.Convert.ToString(textResult.Text + "%");
+            percent = percent / 100;
+            textResult.Text = System.Convert.ToString(percent);
+        }
     }
+    
 }
