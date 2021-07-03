@@ -55,11 +55,11 @@ namespace Calculator
             this.textResult = new System.Windows.Forms.TextBox();
             this.buttonMinus = new System.Windows.Forms.Button();
             this.current_operation = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnMC = new System.Windows.Forms.Button();
+            this.btnMR = new System.Windows.Forms.Button();
+            this.btnMPlus = new System.Windows.Forms.Button();
+            this.btnMMinus = new System.Windows.Forms.Button();
+            this.btnMS = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -325,50 +325,50 @@ namespace Calculator
             this.current_operation.Size = new System.Drawing.Size(0, 20);
             this.current_operation.TabIndex = 24;
             // 
-            // button10
+            // btnMC
             // 
-            this.button10.Location = new System.Drawing.Point(22, 97);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 40);
-            this.button10.TabIndex = 25;
-            this.button10.Text = "MC";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnMC.Location = new System.Drawing.Point(22, 97);
+            this.btnMC.Name = "btnMC";
+            this.btnMC.Size = new System.Drawing.Size(40, 40);
+            this.btnMC.TabIndex = 25;
+            this.btnMC.Text = "MC";
+            this.btnMC.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnMR
             // 
-            this.button11.Location = new System.Drawing.Point(67, 97);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 40);
-            this.button11.TabIndex = 26;
-            this.button11.Text = "MR";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnMR.Location = new System.Drawing.Point(67, 97);
+            this.btnMR.Name = "btnMR";
+            this.btnMR.Size = new System.Drawing.Size(40, 40);
+            this.btnMR.TabIndex = 26;
+            this.btnMR.Text = "MR";
+            this.btnMR.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnMPlus
             // 
-            this.button12.Location = new System.Drawing.Point(113, 97);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(40, 40);
-            this.button12.TabIndex = 27;
-            this.button12.Text = "M+";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnMPlus.Location = new System.Drawing.Point(113, 97);
+            this.btnMPlus.Name = "btnMPlus";
+            this.btnMPlus.Size = new System.Drawing.Size(40, 40);
+            this.btnMPlus.TabIndex = 27;
+            this.btnMPlus.Text = "M+";
+            this.btnMPlus.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnMMinus
             // 
-            this.button13.Location = new System.Drawing.Point(159, 97);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(40, 40);
-            this.button13.TabIndex = 28;
-            this.button13.Text = "M-";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnMMinus.Location = new System.Drawing.Point(159, 97);
+            this.btnMMinus.Name = "btnMMinus";
+            this.btnMMinus.Size = new System.Drawing.Size(40, 40);
+            this.btnMMinus.TabIndex = 28;
+            this.btnMMinus.Text = "M-";
+            this.btnMMinus.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btnMS
             // 
-            this.button14.Location = new System.Drawing.Point(205, 97);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(40, 40);
-            this.button14.TabIndex = 29;
-            this.button14.Text = "MS";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnMS.Location = new System.Drawing.Point(205, 97);
+            this.btnMS.Name = "btnMS";
+            this.btnMS.Size = new System.Drawing.Size(40, 40);
+            this.btnMS.TabIndex = 29;
+            this.btnMS.Text = "MS";
+            this.btnMS.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -400,11 +400,11 @@ namespace Calculator
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(268, 381);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.btnMS);
+            this.Controls.Add(this.btnMMinus);
+            this.Controls.Add(this.btnMPlus);
+            this.Controls.Add(this.btnMR);
+            this.Controls.Add(this.btnMC);
             this.Controls.Add(this.current_operation);
             this.Controls.Add(this.textResult);
             this.Controls.Add(this.buttonNegate);
@@ -485,11 +485,11 @@ namespace Calculator
         private System.Windows.Forms.Button buttonPoint;
         private System.Windows.Forms.Button buttonNegate;
         private System.Windows.Forms.Label current_operation;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnMC;
+        private System.Windows.Forms.Button btnMR;
+        private System.Windows.Forms.Button btnMPlus;
+        private System.Windows.Forms.Button btnMMinus;
+        private System.Windows.Forms.Button btnMS;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
