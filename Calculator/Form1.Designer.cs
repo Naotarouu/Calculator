@@ -333,6 +333,7 @@ namespace Calculator
             this.btnMC.TabIndex = 25;
             this.btnMC.Text = "MC";
             this.btnMC.UseVisualStyleBackColor = true;
+            this.btnMC.Click += new System.EventHandler(this.clickMC);
             // 
             // btnMR
             // 
@@ -342,6 +343,7 @@ namespace Calculator
             this.btnMR.TabIndex = 26;
             this.btnMR.Text = "MR";
             this.btnMR.UseVisualStyleBackColor = true;
+            this.btnMR.Click += new System.EventHandler(this.clickMR);
             // 
             // btnMPlus
             // 
@@ -369,6 +371,7 @@ namespace Calculator
             this.btnMS.TabIndex = 29;
             this.btnMS.Text = "MS";
             this.btnMS.UseVisualStyleBackColor = true;
+            this.btnMS.Click += new System.EventHandler(this.clickMS);
             // 
             // menuStrip1
             // 

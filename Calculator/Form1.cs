@@ -15,6 +15,7 @@ namespace Calculator
         Double value_result = 0;
         String performing_operation = "";
         bool performedOperation = false;
+        Double memory;
         
         public Calculator()
         {
@@ -147,6 +148,25 @@ namespace Calculator
             percent = percent / 100;
             textResult.Text = System.Convert.ToString(percent);
         }
+
+        private void clickMS(object sender, EventArgs e)
+        {
+            memory = Double.Parse(textResult.Text);
+            btnMC.Enabled = true;
+            btnMR.Enabled = true;
+        }
+
+        private void clickMR(object sender, EventArgs e)
+        {
+            textResult.Text = memory.ToString();
+        }
+
+        private void clickMC(object sender, EventArgs e)
+        {
+            textResult.Text = "0";
+            memory = 0;
+            btnMR.Enabled = false;
+            btnMC.Enabled = false;
+        }
     }
-    
 }
