@@ -16,6 +16,7 @@ namespace Calculator
         String performing_operation = "";
         bool performedOperation = false;
         Double memory;
+        bool memoryFlag = false;
         
         public Calculator()
         {
@@ -32,10 +33,12 @@ namespace Calculator
 
         private void clickButton(object sender, EventArgs e)
         {
-            if ((textResult.Text == "0") || (performedOperation))
+            if ((textResult.Text == "0") || (performedOperation) || (memoryFlag))
                 textResult.Clear();
 
             performedOperation = false;
+            memoryFlag = false;
+
             Button button = (Button)sender;
             if (button.Text == ".")
             {
@@ -154,11 +157,13 @@ namespace Calculator
             memory = Double.Parse(textResult.Text);
             btnMC.Enabled = true;
             btnMR.Enabled = true;
+            memoryFlag = true;
         }
 
         private void clickMR(object sender, EventArgs e)
         {
             textResult.Text = memory.ToString();
+            memoryFlag = true;
         }
 
         private void clickMC(object sender, EventArgs e)
@@ -167,6 +172,16 @@ namespace Calculator
             memory = 0;
             btnMR.Enabled = false;
             btnMC.Enabled = false;
+        }
+
+        private void clickMPlus(object sender, EventArgs e)
+        {
+            memory += Double.Parse(textResult.Text);
+        }
+
+        private void clickMMinus(object sender, EventArgs e)
+        {
+            memory -= Double.Parse(textResult.Text);
         }
     }
 }
