@@ -29,13 +29,13 @@ namespace Calculator
 
         private void clickButton(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
             if ((textResult.Text == "0") || (cal.PerformedOperation) || (cal.MemoryFlag))
                 textResult.Clear();
 
             cal.PerformedOperation = false;
             cal.MemoryFlag = false;
 
-            Button button = (Button)sender;
             if (button.Text == ".")
             {
                 if (!textResult.Text.Contains("."))
@@ -81,23 +81,23 @@ namespace Calculator
             if (cal.Value_result != 0)
             {
                 buttonEqual.PerformClick();
+                cal.PerformedOperation = true;
                 cal.Performing_operation = button.Text;
                 current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
-                cal.PerformedOperation = true;
-
             }
             else
             {
                 cal.Performing_operation = button.Text;
                 cal.Value_result = Double.Parse(textResult.Text);
-                current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
                 cal.PerformedOperation = true;
+                current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
             }
 
         }
 
         private void clickEqual(object sender, EventArgs e)
         {
+            current_operation.Text = "";
             switch (cal.Performing_operation) 
             {
                 case "+":
@@ -118,7 +118,7 @@ namespace Calculator
                     break;
             }
             cal.Value_result = Double.Parse(textResult.Text);
-            current_operation.Text = "";        
+            cal.Performing_operation= "";        
         }
 
         private void clickSqrt(object sender, EventArgs e)
