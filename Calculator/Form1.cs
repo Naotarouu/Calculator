@@ -106,7 +106,9 @@ namespace Calculator
                     textResult.Text = cal.Equal;
                     break;
                 case "-":
-                    textResult.Text = (cal.Value_result - Double.Parse(textResult.Text)).ToString();
+                    cal.Equal = textResult.Text;
+                    cal.minus();
+                    textResult.Text = cal.Equal;
                     break;
                 case "*":
                     textResult.Text = (cal.Value_result * Double.Parse(textResult.Text)).ToString();

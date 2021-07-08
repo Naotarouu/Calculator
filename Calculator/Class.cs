@@ -56,6 +56,11 @@ namespace Calculator
             Equal = (Value_result + Double.Parse(Equal)).ToString();
         }
 
+        public void minus()
+        {
+            Equal = (Value_result - Double.Parse(Equal)).ToString();
+        }
+
     }
 
 }
