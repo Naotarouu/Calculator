@@ -12,6 +12,7 @@ namespace Calculator
         private String performing_operation = "";
         private bool performedOperation = false;
         private Double memory;
+        private bool memoryFlag = false;
 
         public double Value_result 
         { 
@@ -35,6 +36,11 @@ namespace Calculator
         { 
             get => memory; 
             set => memory = value; 
+        }
+        public bool MemoryFlag 
+        { 
+            get => memoryFlag; 
+            set => memoryFlag = value; 
         }
     }
 }
