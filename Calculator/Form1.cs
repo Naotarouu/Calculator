@@ -13,7 +13,6 @@ namespace Calculator
     public partial class Calculator : Form
     {
         calClass cal = new calClass();
-        String performing_operation = "";
         bool performedOperation = false;
         Double memory;
         bool memoryFlag = false;
@@ -81,16 +80,16 @@ namespace Calculator
             if (cal.Value_result != 0)
             {
                 buttonEqual.PerformClick();
-                performing_operation = button.Text;
-                current_operation.Text = cal.Value_result + " " + performing_operation;
+                cal.Performing_operation = button.Text;
+                current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
                 performedOperation = true;
 
             }
             else
             {
-                performing_operation = button.Text;
+                cal.Performing_operation = button.Text;
                 cal.Value_result = Double.Parse(textResult.Text);
-                current_operation.Text = cal.Value_result + " " + performing_operation;
+                current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
                 performedOperation = true;
             }
 
@@ -99,7 +98,7 @@ namespace Calculator
 
         private void clickEqual(object sender, EventArgs e)
         {
-            switch (performing_operation) 
+            switch (cal.Performing_operation) 
             {
                 case "+":
                     textResult.Text = (cal.Value_result + Double.Parse(textResult.Text)).ToString();
