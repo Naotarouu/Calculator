@@ -66,6 +66,11 @@ namespace Calculator
             Equal = (Value_result * Double.Parse(Equal)).ToString();
         }
 
+        public void divide()
+        {
+            Equal = (Value_result / Double.Parse(Equal)).ToString();
+        }
+
     }
 
 }
