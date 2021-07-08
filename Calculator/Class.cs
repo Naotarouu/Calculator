@@ -10,6 +10,7 @@ namespace Calculator
     {
         private Double value_result = 0;
         private String performing_operation = "";
+        private bool performedOperation = false;
 
         public double Value_result 
         { 
@@ -21,6 +22,12 @@ namespace Calculator
         { 
             get => performing_operation; 
             set => performing_operation = value; 
+        }
+
+        public bool PerformedOperation 
+        { 
+            get => performedOperation; 
+            set => performedOperation = value; 
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Calculator
     public partial class Calculator : Form
     {
         calClass cal = new calClass();
-        bool performedOperation = false;
         Double memory;
         bool memoryFlag = false;
 
@@ -32,10 +31,10 @@ namespace Calculator
 
         private void clickButton(object sender, EventArgs e)
         {
-            if ((textResult.Text == "0") || (performedOperation) || (memoryFlag))
+            if ((textResult.Text == "0") || (cal.PerformedOperation) || (memoryFlag))
                 textResult.Clear();
 
-            performedOperation = false;
+            cal.PerformedOperation = false;
             memoryFlag = false;
 
             Button button = (Button)sender;
@@ -82,7 +81,7 @@ namespace Calculator
                 buttonEqual.PerformClick();
                 cal.Performing_operation = button.Text;
                 current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
-                performedOperation = true;
+                cal.PerformedOperation = true;
 
             }
             else
@@ -90,7 +89,7 @@ namespace Calculator
                 cal.Performing_operation = button.Text;
                 cal.Value_result = Double.Parse(textResult.Text);
                 current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
-                performedOperation = true;
+                cal.PerformedOperation = true;
             }
 
         }
