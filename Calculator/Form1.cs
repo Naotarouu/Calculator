@@ -101,7 +101,9 @@ namespace Calculator
             switch (cal.Performing_operation) 
             {
                 case "+":
-                    textResult.Text = (cal.Value_result + Double.Parse(textResult.Text)).ToString();
+                    cal.Equal = textResult.Text;
+                    cal.add();
+                    textResult.Text = cal.Equal;
                     break;
                 case "-":
                     textResult.Text = (cal.Value_result - Double.Parse(textResult.Text)).ToString();

@@ -13,6 +13,7 @@ namespace Calculator
         private bool performedOperation = false;
         private Double memory;
         private bool memoryFlag = false;
+        private String equal = "";
 
         public double Value_result 
         { 
@@ -42,6 +43,17 @@ namespace Calculator
         { 
             get => memoryFlag; 
             set => memoryFlag = value; 
+        }
+
+        public string Equal 
+        { 
+            get => equal; 
+            set => equal = value; 
+        }
+
+        public void add()
+        {
+            Equal = (Value_result + Double.Parse(Equal)).ToString();
         }
     }
 }
