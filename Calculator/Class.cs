@@ -70,7 +70,5 @@ namespace Calculator
         {
             Equal = (Value_result / Double.Parse(Equal)).ToString();
         }
-
     }
-
 }

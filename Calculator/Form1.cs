@@ -92,7 +92,6 @@ namespace Calculator
                 cal.PerformedOperation = true;
                 current_operation.Text = cal.Value_result + " " + cal.Performing_operation;
             }
-
         }
 
         private void clickEqual(object sender, EventArgs e)
