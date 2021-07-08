@@ -111,7 +111,9 @@ namespace Calculator
                     textResult.Text = cal.Equal;
                     break;
                 case "*":
-                    textResult.Text = (cal.Value_result * Double.Parse(textResult.Text)).ToString();
+                    cal.Equal = textResult.Text;
+                    cal.multiply();
+                    textResult.Text = cal.Equal;
                     break;
                 case "/":
                     textResult.Text = (cal.Value_result / Double.Parse(textResult.Text)).ToString();

@@ -15,40 +15,40 @@ namespace Calculator
         private bool memoryFlag = false;
         private String equal = "";
 
-        public double Value_result 
-        { 
-            get => value_result; 
-            set => value_result = value; 
+        public double Value_result
+        {
+            get => value_result;
+            set => value_result = value;
         }
 
-        public string Performing_operation 
-        { 
-            get => performing_operation; 
-            set => performing_operation = value; 
+        public string Performing_operation
+        {
+            get => performing_operation;
+            set => performing_operation = value;
         }
 
-        public bool PerformedOperation 
-        { 
-            get => performedOperation; 
-            set => performedOperation = value; 
+        public bool PerformedOperation
+        {
+            get => performedOperation;
+            set => performedOperation = value;
         }
 
-        public double Memory 
-        { 
-            get => memory; 
-            set => memory = value; 
+        public double Memory
+        {
+            get => memory;
+            set => memory = value;
         }
 
-        public bool MemoryFlag 
-        { 
-            get => memoryFlag; 
-            set => memoryFlag = value; 
+        public bool MemoryFlag
+        {
+            get => memoryFlag;
+            set => memoryFlag = value;
         }
 
-        public string Equal 
-        { 
-            get => equal; 
-            set => equal = value; 
+        public string Equal
+        {
+            get => equal;
+            set => equal = value;
         }
 
         public void add()
@@ -59,6 +59,11 @@ namespace Calculator
         public void minus()
         {
             Equal = (Value_result - Double.Parse(Equal)).ToString();
+        }
+
+        public void multiply()
+        {
+            Equal = (Value_result * Double.Parse(Equal)).ToString();
         }
 
     }
