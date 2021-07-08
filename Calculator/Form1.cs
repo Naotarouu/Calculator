@@ -12,12 +12,12 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
-        Double value_result = 0;
+        calClass cal = new calClass();
         String performing_operation = "";
         bool performedOperation = false;
         Double memory;
         bool memoryFlag = false;
-        
+
         public Calculator()
         {
             InitializeComponent();
@@ -66,7 +66,7 @@ namespace Calculator
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textResult.Text = "0";
-            value_result = 0;
+            cal.Value_result = 0;
             current_operation.Text = "";
         }
 
@@ -78,19 +78,19 @@ namespace Calculator
         private void clickOperator(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (value_result != 0)
+            if (cal.Value_result != 0)
             {
                 buttonEqual.PerformClick();
                 performing_operation = button.Text;
-                current_operation.Text = value_result + " " + performing_operation;
+                current_operation.Text = cal.Value_result + " " + performing_operation;
                 performedOperation = true;
 
             }
             else
             {
                 performing_operation = button.Text;
-                value_result = Double.Parse(textResult.Text);
-                current_operation.Text = value_result + " " + performing_operation;
+                cal.Value_result = Double.Parse(textResult.Text);
+                current_operation.Text = cal.Value_result + " " + performing_operation;
                 performedOperation = true;
             }
 
@@ -102,21 +102,21 @@ namespace Calculator
             switch (performing_operation) 
             {
                 case "+":
-                    textResult.Text = (value_result + Double.Parse(textResult.Text)).ToString();
+                    textResult.Text = (cal.Value_result + Double.Parse(textResult.Text)).ToString();
                     break;
                 case "-":
-                    textResult.Text = (value_result - Double.Parse(textResult.Text)).ToString();
+                    textResult.Text = (cal.Value_result - Double.Parse(textResult.Text)).ToString();
                     break;
                 case "*":
-                    textResult.Text = (value_result * Double.Parse(textResult.Text)).ToString();
+                    textResult.Text = (cal.Value_result * Double.Parse(textResult.Text)).ToString();
                     break;
                 case "/":
-                    textResult.Text = (value_result / Double.Parse(textResult.Text)).ToString();
+                    textResult.Text = (cal.Value_result / Double.Parse(textResult.Text)).ToString();
                     break;
                 default:
                     break;
             }
-            value_result = Double.Parse(textResult.Text);
+            cal.Value_result = Double.Parse(textResult.Text);
             current_operation.Text = "";        
         }
 
