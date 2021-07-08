@@ -39,11 +39,15 @@ namespace Calculator
             if (button.Text == ".")
             {
                 if (!textResult.Text.Contains("."))
-                    textResult.Text += button.Text;
-
+                { 
+                    textResult.Text += button.Text; 
+                }
             }
-            else { }
-            textResult.Text += button.Text;
+            else 
+            {
+                textResult.Text += button.Text;               
+            }
+            
         }
 
         private void buttonBSpace_Click(object sender, EventArgs e)
@@ -91,7 +95,6 @@ namespace Calculator
             }
 
         }
-
 
         private void clickEqual(object sender, EventArgs e)
         {

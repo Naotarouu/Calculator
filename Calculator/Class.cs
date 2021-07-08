@@ -37,6 +37,7 @@ namespace Calculator
             get => memory; 
             set => memory = value; 
         }
+
         public bool MemoryFlag 
         { 
             get => memoryFlag; 
